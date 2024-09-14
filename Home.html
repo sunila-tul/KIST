@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="shortcut icon" href="https://studyzonenepal.com/wp-content/uploads/2024/09/Kist-College-Logo.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw; 
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://theedunepal.ap-south-1.linodeobjects.com/uploads/clients/kistcollege/gallery/gallery/college_1654759754.jpg');
+            background-size: cover;
+            background-position: top center;
+            opacity: 0.25;
+            z-index: -1; 
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: -1; 
+        }
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        header .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+        header .navbar .logo {
+            display: flex;
+            align-items: center; 
+        }
+        header .navbar .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: x-small;
+        }
+        header .navbar .logo h1 {
+            margin-right: 10px; 
+            font-size: xx-large;
+        }
+        header .navbar .logo i {
+            text-decoration: none;
+            color: white;
+            font-size: xx-large;
+        }
+        header .navbar nav ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 5px;
+            list-style: none;
+            background: transparent
+
+        }
+        header .navbar nav ul li {
+            flex: 1;
+            font-size: x-small;
+            background: transparent;
+        }
+        header .navbar nav ul li a {
+            display: block;
+            padding: 25px;
+            text-decoration: none;
+            font-size: x-large;
+            color: grey;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header .navbar nav ul li a:hover {
+            filter: brightness(1.5);
+        }
+        header .navbar input {
+            border: lightgray solid;
+            height: 40px;
+            border-radius: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            background: beige;
+        }
+        header .navbar input:focus {
+            outline: none;
+            border-bottom: 2px solid rgb(233, 173, 240);
+            box-shadow: 0 0 10px rgb(163, 115, 163);
+        }
+        header .navbar input::placeholder {
+            color: rgb(224, 181, 181);
+            font-style: italic;
+        }
+        .para{
+            padding: 5%;
+            position: absolute;
+            bottom: 20%;
+            right: 50%;
+            font-size: xx-large;
+
+        }
+        .para p{
+            color: white;
+            font-size: larger;
+            font-style: Helvetica;      
+        }
+        .high{
+            color: rgb(42, 106, 224);
+        }
+        .icons {
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 95%;
+    bottom: 8%;
+    font-size: large;
+    gap: 30px; 
+}
+.rotate-text {
+    transform: rotate(180deg); 
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+}
+.icons i {
+    font-size: 24px; 
+}
+.para1{
+    color: grey;
+    font-size: small;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+body {
+           background-color: black; 
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            overflow: scroll; 
+            margin: 0; 
+            background-repeat: no-repeat; 
+            background-position: top right;
+            background-size: 20%; 
+            display: flex;
+            flex-direction: row;
+        
+        }
+
+        .paragraph {
+            font-size: 24px;
+            line-height: 1.5;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeOut 0.5s forwards;
+        }
+
+        .paragraph.active {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        .para2{
+            position: absolute;
+            bottom: 5%;
+            right: 10%;
+            background-color: rgba(0, 0, 0, 0);
+            
+        }
+        .para2 .paragraph{
+            font-size: xx-large;
+            
+        }
+        
+        .banner {
+            flex: 1;
+            padding: 20px;
+        }
+        .box{
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 185px;
+            height: 185px;
+            background: url(https://sgp1.digitaloceanspaces.com/edsmed/logos/KIST_College__SS.jpg.200x200_q85.jpg);
+            background-position: center;
+            border: white solid;
+            border-radius: 30%;
+            animation: animate 1s infinite alternate;
+            transition: 2s;
+        }
+        .box:hover{
+            transform: rotate(50deg);
+            background: url(https://kist.edu.np/resources/assets/img/kist_building.jpg);
+            background-position: center;
+            border-radius: 50%;
+        }
+        
+
+  
+</style>
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#"><h1>KIST</h1></a>
+                    <i class='bx bx-book'></i>
+                </div>
+                <div id="nav-placeholder">
+                     <nav>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Programs.html">Programs</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+            </div>
+            </header>
+            <div class="para">
+                <p>Presenting Education In <span class="high"> Beautiful</span> Way!</p>
+            </div>
+            <div class="icons">
+                
+                
+                <i class='bx bx-download'></i>
+                <i class='bx bx-left-arrow-alt'></i>
+                <i class='bx bxs-comment'></i>
+                <i class='bx bxs-exit'></i>
+            </div>
+            <div class="para1">
+                <p>
+                    E: info@kist.edu.np
+                </p>
+                 </div>
+            <div class="para2"><p class="paragraph">Educating you since <span class="high">1995!</span>  </p>
+        <p class="paragraph"> With high quality<span class="high"> Education</span></p>
+        <p class="paragraph">And <span class="high">Successful</span> outcomes</p></div>
+    
+        <script>
+            window.addEventListener('load', () => {
+        const paragraphs = document.querySelectorAll('.paragraph');
+        let index = 0;
+    
+        function showNextParagraph() {
+            if (index > 0) {
+                paragraphs[index - 1].classList.remove('active');
+            }
+    
+            if (index < paragraphs.length) {
+                paragraphs[index].classList.add('active');
+                index++;
+            } else {
+                // Loop back to the first paragraph
+                paragraphs[paragraphs.length - 1].classList.remove('active');
+                index = 0;
+                paragraphs[index].classList.add('active');
+            }
+    
+            // Call the function again after 4 seconds (or your desired duration)
+            setTimeout(showNextParagraph, 2000); 
+        }
+    
+        showNextParagraph();
+    });
+        </script>
+        
+        <div class="box">
+
+        </div>
+    
+        
+    </div>
+</body>
+</html>

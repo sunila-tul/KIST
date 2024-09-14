@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Overlap Issue</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: 5%;
+            top: 50px; /* Adjust the top position if needed */
+            background-color: #e40c0c;
+            z-index: 10; /* Ensure this is higher than other elements */
+        }
+
+        .text {
+            position: relative; /* Ensure text is positioned relative to avoid overlap */
+            z-index: 1; /* Lower z-index than the box */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="text">
+        <p>This is some text that should not overlap the box. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque optio, earum perferendis, distinctio nesciunt asperiores tenetur porro, perspiciatis eius laboriosam ducimus culpa accusantium ipsa repellat sit minima quod error temporibus. Adipisci repellat repudiandae dignissimos praesentium aspernatur quisquam dolor repellendus, excepturi consectetur facere ducimus cumque quia magni doloribus, veniam rerum incidunt corporis maxime iusto inventore mollitia saepe sit! Saepe totam ullam, eius ducimus recusandae, nulla minima corrupti excepturi, ad quaerat maxime? Iusto libero, doloremque nostrum minus eum praesentium consequuntur error. Voluptas ratione reiciendis animi labore inventore excepturi fugit sit a ab veniam molestiae quia, quae obcaecati quidem molestias consequuntur! Corrupti tempora cumque quo ipsam molestias ipsum illo repellat quia nulla? Porro harum asperiores accusamus sed vero aliquam aliquid modi. Ullam quam, rerum illo pariatur odit et facere totam, eligendi voluptatem omnis doloremque ipsam ut iste at dolorum eius culpa eos eum voluptatum magni consequuntur impedit tempora laborum possimus. At voluptatem culpa eveniet iusto dignissimos sed eum aliquid recusandae magni doloremque, tenetur, tempore inventore modi corporis ducimus non! Nemo nisi perferendis neque sapiente, magni quam, distinctio laudantium delectus voluptate voluptas quod quasi illum error sunt expedita magnam doloribus asperiores iste rerum ducimus consequuntur enim odio sint! Illo ducimus nesciunt quos dolorum aliquam. Adjust the padding or margins if needed to ensure proper spacing.</p>
+    </div>
+</body>
+</html>
